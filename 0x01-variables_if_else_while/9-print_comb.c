@@ -1,7 +1,7 @@
 #include <stdio.h>
-
 /**
- * main - Prints all combination of single digits
+ * main - Entry point
+ *
  * Return: Always 0 (success)
  */
 
@@ -17,7 +17,7 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
-		putchar('\n');
-		return (0);
 	}
+	putchar('\n');
+	return (0);
 }

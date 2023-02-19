@@ -1,35 +1,34 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * main - Entry Point
- * Description: Prints two digits combination
- * Return: Always 0 (success)
+ * main - Entry
+ * Return: 0 (Success)
  */
 int main(void)
 {
-	int c i;
+	int c;
+	int d = 0;
 
-	for (c = '0'; c <= '9'; c++)
-
+	while (d < 10)
 	{
-		for (i = '0'; i <= '9'; i++)
+		c = 0;
+		while (c < 10)
 		{
-			if (c < i)
+			if (d != c && d < c)
 			{
-			putchar(c);
-			putchar(i);
+				putchar('0' + d);
+				putchar('0' + c);
 
-			if (c != '8' || (c == '8' && i != '9'))
-			{
-				putchar(',');
-				putchar(' ');
+				if (c + d != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			}
+			c++;
 		}
+		d++;
 	}
-
 	putchar('\n');
-
 	return (0);
 }
-

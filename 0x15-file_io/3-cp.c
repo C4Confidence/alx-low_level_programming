@@ -5,7 +5,7 @@
  * error_file - check if a file is opened and handle error
  * @file_from: intitial file to copy and check
  * @file_to: destination file
- * @argv: file number
+ * @argv: argument vector
  * Return: no return
  */
 
@@ -14,7 +14,7 @@ void error_file(int file_from, int file_to, char *argv[])
 	if (file_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[1]);
-		exit(90);
+		exit(98);
 	}
 	if (file_to == -1)
 	{
